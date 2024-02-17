@@ -4,7 +4,7 @@
 
 @layer {
   .container {
-    @apply px-[30px] mx-auto;
+    @apply mx-auto;
   }
   .element-centeredByFlex {
     @apply flex justify-center items-center;
