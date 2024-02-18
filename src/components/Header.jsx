@@ -16,6 +16,7 @@ const Header = () => {
       followers: 1987,
       todayNum: 12,
       state: upIcon,
+      borderTop: "border-[#198FF5]",
     },
     {
       icon: twitterIcon,
@@ -23,6 +24,7 @@ const Header = () => {
       followers: 1044,
       todayNum: 99,
       state: upIcon,
+      borderTop: "border-[#1CA0F2]",
     },
     {
       icon: instagramIcon,
@@ -30,6 +32,7 @@ const Header = () => {
       followers: "11K",
       todayNum: 1099,
       state: upIcon,
+      borderTop: "bg-gradient-to-r from-[#FDC468] to-[#DF4996]",
     },
     {
       icon: youtubeIcon,
@@ -37,10 +40,11 @@ const Header = () => {
       subscribers: 8239,
       todayNum: 144,
       state: downIcon,
+      borderTop: "border-[#C4032A]",
     },
   ]);
   return (
-    <section className="container bg-[#ddd] p-10">
+    <section className="container bg-[#ddd] p-10 ">
       <div className="1 flex flex-col md:flex-row  md:justify-between md:items-center font-bold">
         <div className="1.1 flex  flex-col  md:flex-col">
           <h1 className=" text-3xl">Social Media Dashboard</h1>
@@ -61,6 +65,7 @@ const Header = () => {
             subscribers={cardData.subscribers}
             state={cardData.state}
             todayNum={cardData.todayNum}
+            borderTop={cardData.borderTop}
           />
         ))}
       </div>

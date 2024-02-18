@@ -5,9 +5,12 @@ const SocialCardBox = ({
   state,
   todayNum,
   subscribers,
+  borderTop,
 }) => {
   return (
-    <div className="container max-w-full max-h-full w-[300px] h-[275px] rounded-md border-solid border-t-4  border-[red]">
+    <div
+      className={`container max-w-full max-h-full w-[300px] h-[275px] rounded-md border-t-4 ${borderTop}`}
+    >
       <div className=" flex-col element-centered gap-5 p-10">
         <div className="flex gap-3">
           <img src={icon} alt="img" className="object-contain w-6 h-6" />
