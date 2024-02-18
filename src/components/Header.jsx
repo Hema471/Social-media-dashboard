@@ -5,10 +5,11 @@ import youtubeIcon from "../assets/icon-youtube.svg";
 import upIcon from "../assets/icon-up.svg";
 import downIcon from "../assets/icon-down.svg";
 import { useState } from "react";
-
 import SocialCardBox from "./SocialCardBox";
+import { v4 as uuidv4 } from 'uuid';
 
 const Header = () => {
+  const randomId = uuidv4();
   const [cardData, setCardData] = useState([
     {
       icon: facebookIcon,
@@ -16,7 +17,7 @@ const Header = () => {
       followers: 1987,
       todayNum: 12,
       state: upIcon,
-      borderTop: "border-[#198FF5]",
+      borderTop: "bg-[#198FF5]",
     },
     {
       icon: twitterIcon,
@@ -24,7 +25,7 @@ const Header = () => {
       followers: 1044,
       todayNum: 99,
       state: upIcon,
-      borderTop: "border-[#1CA0F2]",
+      borderTop: "bg-[#1CA0F2]",
     },
     {
       icon: instagramIcon,
@@ -40,7 +41,7 @@ const Header = () => {
       subscribers: 8239,
       todayNum: 144,
       state: downIcon,
-      borderTop: "border-[#C4032A]",
+      borderTop: "bg-[#C4032A]",
     },
   ]);
   return (
@@ -52,10 +53,11 @@ const Header = () => {
         </div>
         <div className="1.2 flex justify-between md:items-center">
           <h3 className="md:px-5">Dark Mode</h3>
-          <input type="checkbox" />
+          <label htmlFor="ch1"></label>
+          <input type="checkbox" id="ch1" />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5  mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  mt-5">
         {cardData.map((cardData) => (
           <SocialCardBox
             key={cardData.userName}
