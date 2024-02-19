@@ -5,61 +5,81 @@ import youtubeIcon from "../assets/icon-youtube.svg";
 import upIcon from "../assets/icon-up.svg";
 import downIcon from "../assets/icon-down.svg";
 import { useState } from "react";
+import OverviewCardBox from "./OverviewCardBox";
 const OverviewCard = () => {
   const [cardData, setCardData] = useState([
     {
       title: "Page Views",
       icon: facebookIcon,
       number: 87,
-      state: `${upIcon} 3%`,
+      state: upIcon,
+      stateNum: "3%",
     },
     {
       title: "Likes",
       icon: facebookIcon,
       number: 52,
-      state: `${downIcon} 2%`,
+      state: `${downIcon} `,
+      stateNum: "2%",
     },
     {
       title: "Likes",
       icon: instagramIcon,
       number: 5462,
-      state: `${upIcon} 2257%`,
+      state: `${upIcon}`,
+      stateNum: "2257%",
     },
     {
       title: "Profile Views",
       icon: instagramIcon,
       number: "52K",
-      state: `${upIcon} 1375%`,
+      state: `${upIcon} `,
+      stateNum: "1375%",
     },
     {
       title: "Retweets",
       icon: twitterIcon,
       number: 117,
-      state: `${upIcon} 303%`,
+      state: `${upIcon} `,
+      stateNum: "303%",
     },
     {
       title: "Likes",
       icon: twitterIcon,
       number: 507,
-      state: `${upIcon} 553%`,
+      state: `${upIcon} `,
+      stateNum: "553%",
     },
     {
       title: "Likes",
       icon: youtubeIcon,
       number: 107,
-      state: `${downIcon} 19%`,
+      state: `${downIcon}`,
+      stateNum: "3%",
     },
     {
       title: "Total Views",
       icon: youtubeIcon,
       number: 1407,
-      state: `${downIcon} 12%`,
+      state: `${downIcon} `,
+      stateNum: "12%",
     },
   ]);
   return (
     <section className="container mt-10">
       <p className="text-2xl">Overview - Today</p>
-      <div></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
+        {cardData.map((data) => (
+          <OverviewCardBox
+            key={data.title}
+            title={data.title}
+            icon={data.icon}
+            number={data.number}
+            state={data.state}
+            stateNum={data.stateNum}
+          />
+        ))}
+      </div>
     </section>
   );
 };

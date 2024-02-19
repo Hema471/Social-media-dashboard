@@ -58,16 +58,16 @@ const Header = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
-        {cardData.map((cardData) => (
+        {cardData.map((data) => (
           <SocialCardBox
-            key={cardData.userName}
-            name={cardData.userName}
-            icon={cardData.icon}
-            followers={cardData.followers}
-            subscribers={cardData.subscribers}
-            state={cardData.state}
-            todayNum={cardData.todayNum}
-            borderTop={cardData.borderTop}
+            key={data.userName}
+            name={data.userName}
+            icon={data.icon}
+            followers={data.followers}
+            subscribers={data.subscribers}
+            state={data.state}
+            todayNum={data.todayNum}
+            borderTop={data.borderTop}
           />
         ))}
       </div>
