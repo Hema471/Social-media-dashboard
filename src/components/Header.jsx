@@ -6,7 +6,7 @@ import upIcon from "../assets/icon-up.svg";
 import downIcon from "../assets/icon-down.svg";
 import { useState } from "react";
 import SocialCardBox from "./SocialCardBox";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const Header = () => {
   const randomId = uuidv4();
@@ -48,7 +48,7 @@ const Header = () => {
     <section className="container bg-[#ddd] p-10 ">
       <div className="1 flex flex-col md:flex-row  md:justify-between md:items-center font-bold">
         <div className="1.1 flex  flex-col  md:flex-col">
-          <h1 className=" text-3xl">Social Media Dashboard</h1>
+          <h1 className=" text-2xl">Social Media Dashboard</h1>
           <h3>Total Followers: 23.004</h3>
         </div>
         <div className="1.2 flex justify-between md:items-center">
@@ -57,7 +57,7 @@ const Header = () => {
           <input type="checkbox" id="ch1" />
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5  mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
         {cardData.map((cardData) => (
           <SocialCardBox
             key={cardData.userName}

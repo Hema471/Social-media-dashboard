@@ -10,7 +10,7 @@ const SocialCardBox = ({
   return (
     // ${borderTop}
     <div
-      className={`container max-w-full max-h-full w-[300px] h-[275px] border-t-4 rounded-md relative top-before before:${borderTop} overflow-none`}
+      className={`container max-w-full max-h-full w-[300px] h-[275px] card-hover border-t-4 rounded-m d relative  top-before before:${borderTop} overflow-none`}
     >
       <div className=" flex-col element-centered gap-5 p-10">
         <div className="flex gap-3">
