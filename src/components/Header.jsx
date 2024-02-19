@@ -17,7 +17,7 @@ const Header = () => {
       followers: 1987,
       todayNum: 12,
       state: upIcon,
-      borderTop: "bg-[#198FF5]",
+      borderTop: "#198FF5",
     },
     {
       icon: twitterIcon,
@@ -25,7 +25,7 @@ const Header = () => {
       followers: 1044,
       todayNum: 99,
       state: upIcon,
-      borderTop: "bg-[#1CA0F2]",
+      borderTop: "#1CA0F2",
     },
     {
       icon: instagramIcon,
@@ -33,7 +33,8 @@ const Header = () => {
       followers: "11K",
       todayNum: 1099,
       state: upIcon,
-      borderTop: "bg-gradient-to-r from-[#FDC468] to-[#DF4996]",
+      borderTop: "#E6A47E",
+      // borderTop: "linear-gradient(to right, #FDC468, #DF4996)",
     },
     {
       icon: youtubeIcon,
@@ -41,7 +42,7 @@ const Header = () => {
       subscribers: 8239,
       todayNum: 144,
       state: downIcon,
-      borderTop: "bg-[#C4032A]",
+      borderTop: "#C4032A",
     },
   ]);
   return (

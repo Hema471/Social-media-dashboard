@@ -6,7 +6,7 @@ const OverviewCardBox = ({ title, icon, number, state, stateNum }) => {
         <img
           src={icon}
           alt={`${title} image`}
-          className="object-contain w-5 h-5 "
+          className="object-contain w-5 h-5"
         />
       </div>
       <div className="2 flex justify-around items-center pt-7">
