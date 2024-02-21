@@ -50,34 +50,38 @@ const Header = () => {
     },
   ]);
   return (
-    <section className="container bg-[#ddd] p-10 ">
-      <div className="1 flex flex-col md:flex-row  md:justify-between md:items-center font-bold">
-        <div className="1.1 flex  flex-col  md:flex-col">
-          <h1 className=" text-2xl">Social Media Dashboard</h1>
-          <h3>Total Followers: 23.004</h3>
+    // bg-[#F8F9FE]
+    <>
+      <div className="bg-[#F8F9FE] h-[250px] relative"></div>
+      <section className="container p-10 absolute z-50 top-0  ">
+        <div className="1 flex flex-col md:flex-row md:justify-between md:items-center font-bold">
+          <div className="1.1 flex  flex-col  md:flex-col">
+            <h1 className=" text-2xl">Social Media Dashboard</h1>
+            <h3>Total Followers: 23.004</h3>
+          </div>
+          <div className="1.2 flex justify-between md:items-center">
+            <h3 className="md:px-5">Dark Mode</h3>
+            <label htmlFor="ch1"></label>
+            <input type="checkbox" id="ch1" />
+          </div>
         </div>
-        <div className="1.2 flex justify-between md:items-center">
-          <h3 className="md:px-5">Dark Mode</h3>
-          <label htmlFor="ch1"></label>
-          <input type="checkbox" id="ch1" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
+          {cardData.map((data) => (
+            <SocialCardBox
+              key={data.userName}
+              name={data.userName}
+              icon={data.icon}
+              followers={data.followers}
+              subscribers={data.subscribers}
+              state={data.state}
+              todayNum={data.todayNum}
+              textColor={data.textColor}
+              borderTop={data.borderTop}
+            />
+          ))}
         </div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
-        {cardData.map((data) => (
-          <SocialCardBox
-            key={data.userName}
-            name={data.userName}
-            icon={data.icon}
-            followers={data.followers}
-            subscribers={data.subscribers}
-            state={data.state}
-            todayNum={data.todayNum}
-            textColor={data.textColor}
-            borderTop={data.borderTop}
-          />
-        ))}
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

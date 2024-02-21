@@ -10,7 +10,7 @@ const SocialCardBox = ({
 }) => {
   return (
     <div
-      className={`container card-hover max-w-full max-h-full w-[300px] h-[275px] rounded-md border-t-4 `}
+      className={`container card-hover   max-w-full max-h-full w-[300px] h-[275px] rounded-md border-t-4 bg-[#F8F9FE]`}
       style={{ borderTopColor: borderTop }}
     >
       <div className="flex-col element-center gap-5 p-10">
