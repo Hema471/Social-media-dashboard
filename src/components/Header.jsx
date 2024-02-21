@@ -17,6 +17,7 @@ const Header = () => {
       followers: 1987,
       todayNum: 12,
       state: upIcon,
+      textColor: "text-[#76B9AA]",
       borderTop: "#198FF5",
     },
     {
@@ -25,6 +26,7 @@ const Header = () => {
       followers: 1044,
       todayNum: 99,
       state: upIcon,
+      textColor: "text-[#76B9AA]",
       borderTop: "#1CA0F2",
     },
     {
@@ -33,6 +35,7 @@ const Header = () => {
       followers: "11K",
       todayNum: 1099,
       state: upIcon,
+      textColor: "text-[#76B9AA]",
       borderTop: "#E6A47E",
       // borderTop: "linear-gradient(to right, #FDC468, #DF4996)",
     },
@@ -42,6 +45,7 @@ const Header = () => {
       subscribers: 8239,
       todayNum: 144,
       state: downIcon,
+      textColor: "text-[#BC606C]",
       borderTop: "#C4032A",
     },
   ]);
@@ -68,6 +72,7 @@ const Header = () => {
             subscribers={data.subscribers}
             state={data.state}
             todayNum={data.todayNum}
+            textColor={data.textColor}
             borderTop={data.borderTop}
           />
         ))}
