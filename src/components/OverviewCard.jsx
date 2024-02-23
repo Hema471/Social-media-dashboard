@@ -14,6 +14,7 @@ const OverviewCard = () => {
       number: 87,
       state: upIcon,
       stateNum: "3%",
+      textColor: "text-[#1DB489]",
     },
     {
       title: "Likes",
@@ -21,6 +22,7 @@ const OverviewCard = () => {
       number: 52,
       state: `${downIcon} `,
       stateNum: "2%",
+      textColor: "text-[#DC414C]",
     },
     {
       title: "Likes",
@@ -28,6 +30,7 @@ const OverviewCard = () => {
       number: 5462,
       state: `${upIcon}`,
       stateNum: "2257%",
+      textColor: "text-[#1DB489]",
     },
     {
       title: "Profile Views",
@@ -35,6 +38,7 @@ const OverviewCard = () => {
       number: "52K",
       state: `${upIcon} `,
       stateNum: "1375%",
+      textColor: "text-[#1DB489]",
     },
     {
       title: "Retweets",
@@ -42,6 +46,7 @@ const OverviewCard = () => {
       number: 117,
       state: `${upIcon} `,
       stateNum: "303%",
+      textColor: "text-[#1DB489]",
     },
     {
       title: "Likes",
@@ -49,6 +54,7 @@ const OverviewCard = () => {
       number: 507,
       state: `${upIcon} `,
       stateNum: "553%",
+      textColor: "text-[#1DB489]",
     },
     {
       title: "Likes",
@@ -56,6 +62,7 @@ const OverviewCard = () => {
       number: 107,
       state: `${downIcon}`,
       stateNum: "3%",
+      textColor: "text-[#DC414C]",
     },
     {
       title: "Total Views",
@@ -63,11 +70,12 @@ const OverviewCard = () => {
       number: 1407,
       state: `${downIcon} `,
       stateNum: "12%",
+      textColor: "text-[#DC414C]",
     },
   ]);
   return (
     <section className="container mt-[1100px] md:mt-[200px]">
-      <p className="text-2xl px-8">Overview - Today</p>
+      <p className="text-2xl px-8 font-bold text-[#63687E]">Overview - Today</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 px-8  pb-10">
         {cardData.map((data) => (
           <OverviewCardBox
@@ -77,6 +85,7 @@ const OverviewCard = () => {
             number={data.number}
             state={data.state}
             stateNum={data.stateNum}
+            textColor={data.textColor}
           />
         ))}
       </div>
