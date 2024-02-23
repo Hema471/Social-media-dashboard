@@ -4,9 +4,10 @@ import instagramIcon from "../assets/icon-instagram.svg";
 import youtubeIcon from "../assets/icon-youtube.svg";
 import upIcon from "../assets/icon-up.svg";
 import downIcon from "../assets/icon-down.svg";
-import { useState } from "react";
 import SocialCardBox from "./SocialCardBox";
 import { v4 as uuidv4 } from "uuid";
+import CheckBoxDark from "./DarkModeToggle";
+import { useState } from "react";
 
 const Header = () => {
   const randomId = uuidv4();
@@ -49,22 +50,21 @@ const Header = () => {
       borderTop: "#C4032A",
     },
   ]);
+
   return (
-    // bg-[#F8F9FE]
-    <div className=" flex justify-center bg-bg dark:bg-darkbg h-[250px] relative">
-      <section className="container p-10 absolute z-50 top-0 ">
-        <div className="1 dark:text-white flex flex-col md:flex-row md:justify-between md:items-center font-bold ">
+    <div className="flex justify-center bg-bg dark:bg-darkbg h-[250px] relative">
+      <section className="container p-10 absolute z-50 top-0">
+        <div className="1 dark:text-bg flex flex-col md:flex-row md:justify-between md:items-center font-bold ">
           <div className="1.1 flex  flex-col  md:flex-col">
             <h1 className=" text-2xl">Social Media Dashboard</h1>
             <h3>Total Followers: 23.004</h3>
           </div>
           <div className="1.2 flex justify-between md:items-center">
             <h3 className="md:px-5">Dark Mode</h3>
-            <label htmlFor="ch1"></label>
-            <input type="checkbox" id="ch1" />
+            <CheckBoxDark />
           </div>
         </div>
-        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
           {cardData.map((data) => (
             <SocialCardBox
               key={data.userName}

@@ -9,6 +9,7 @@ import OverviewCardBox from "./OverviewCardBox";
 const OverviewCard = () => {
   const [cardData, setCardData] = useState([
     {
+      id: 1,
       title: "Page Views",
       icon: facebookIcon,
       number: 87,
@@ -17,6 +18,7 @@ const OverviewCard = () => {
       textColor: "text-[#1DB489]",
     },
     {
+      id: 2,
       title: "Likes",
       icon: facebookIcon,
       number: 52,
@@ -25,6 +27,7 @@ const OverviewCard = () => {
       textColor: "text-[#DC414C]",
     },
     {
+      id: 3,
       title: "Likes",
       icon: instagramIcon,
       number: 5462,
@@ -33,6 +36,7 @@ const OverviewCard = () => {
       textColor: "text-[#1DB489]",
     },
     {
+      id: 4,
       title: "Profile Views",
       icon: instagramIcon,
       number: "52K",
@@ -41,6 +45,7 @@ const OverviewCard = () => {
       textColor: "text-[#1DB489]",
     },
     {
+      id: 5,
       title: "Retweets",
       icon: twitterIcon,
       number: 117,
@@ -49,6 +54,7 @@ const OverviewCard = () => {
       textColor: "text-[#1DB489]",
     },
     {
+      id: 6,
       title: "Likes",
       icon: twitterIcon,
       number: 507,
@@ -57,6 +63,7 @@ const OverviewCard = () => {
       textColor: "text-[#1DB489]",
     },
     {
+      id: 7,
       title: "Likes",
       icon: youtubeIcon,
       number: 107,
@@ -65,6 +72,7 @@ const OverviewCard = () => {
       textColor: "text-[#DC414C]",
     },
     {
+      id: 8,
       title: "Total Views",
       icon: youtubeIcon,
       number: 1407,
@@ -81,7 +89,7 @@ const OverviewCard = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 px-8  pb-10">
         {cardData.map((data) => (
           <OverviewCardBox
-            key={data.title}
+            key={data.id}
             title={data.title}
             icon={data.icon}
             number={data.number}

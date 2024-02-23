@@ -7,7 +7,7 @@ const OverviewCardBox = ({
   textColor,
 }) => {
   return (
-    <div className="container w-[300px] h-[150px] md:w-full bg-bg dark:text-bg dark:bg-darkbg card-hover">
+    <div className="container w-[300px] h-[150px] md:w-full bg-bg dark:text-bg dark:bg-darkbg-card card-hover">
       <div className="1 flex justify-around items-center pt-8  -mx-7 md:-mx-3">
         <p className="font-normal text-xl">{title}</p>
         <img

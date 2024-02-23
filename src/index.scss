@@ -9,6 +9,7 @@
   @apply flex justify-center items-center;
 }
 .card-hover {
+  // dark:hover:bg-bg-card
   @apply hover:bg-[#E1E3F0] transition-all duration-200 cursor-pointer;
 }
 .top-before {
