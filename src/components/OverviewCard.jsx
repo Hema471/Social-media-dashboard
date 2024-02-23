@@ -74,8 +74,10 @@ const OverviewCard = () => {
     },
   ]);
   return (
-    <section className="container mt-[1100px] md:mt-[200px]">
-      <p className="text-2xl px-8 font-bold text-[#63687E]">Overview - Today</p>
+    <section className="container  mt-[1100px] md:mt-[200px]">
+      <p className="text-2xl px-9 font-bold text-[#63687E] dark:text-bg">
+        Overview - Today
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-5 px-8  pb-10">
         {cardData.map((data) => (
           <OverviewCardBox

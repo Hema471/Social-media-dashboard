@@ -51,9 +51,9 @@ const Header = () => {
   ]);
   return (
     // bg-[#F8F9FE]
-    <div className=" flex justify-center bg-[#F8F9FE] h-[250px] relative">
+    <div className=" flex justify-center bg-bg dark:bg-darkbg h-[250px] relative">
       <section className="container p-10 absolute z-50 top-0 ">
-        <div className="1 flex flex-col md:flex-row md:justify-between md:items-center font-bold ">
+        <div className="1 dark:text-white flex flex-col md:flex-row md:justify-between md:items-center font-bold ">
           <div className="1.1 flex  flex-col  md:flex-col">
             <h1 className=" text-2xl">Social Media Dashboard</h1>
             <h3>Total Followers: 23.004</h3>
@@ -64,7 +64,7 @@ const Header = () => {
             <input type="checkbox" id="ch1" />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5 ">
+        <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5 ">
           {cardData.map((data) => (
             <SocialCardBox
               key={data.userName}
