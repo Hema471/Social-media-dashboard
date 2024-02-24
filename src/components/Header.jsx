@@ -5,12 +5,9 @@ import youtubeIcon from "../assets/icon-youtube.svg";
 import upIcon from "../assets/icon-up.svg";
 import downIcon from "../assets/icon-down.svg";
 import SocialCardBox from "./SocialCardBox";
-import { v4 as uuidv4 } from "uuid";
-import CheckBoxDark from "./DarkModeToggle";
 import { useState } from "react";
 
 const Header = () => {
-  const randomId = uuidv4();
   const [cardData, setCardData] = useState([
     {
       icon: facebookIcon,
@@ -51,6 +48,13 @@ const Header = () => {
     },
   ]);
 
+  let [dark, setDark] = useState(false);
+  function handleChecked(event) {
+    setDark(event.target.checked);
+  }
+  console.log(dark);
+
+  // export  dark;
   return (
     <div className="flex justify-center bg-bg dark:bg-darkbg h-[250px] relative">
       <section className="container p-10 absolute z-50 top-0">
@@ -61,7 +65,11 @@ const Header = () => {
           </div>
           <div className="1.2 flex justify-between md:items-center">
             <h3 className="md:px-5">Dark Mode</h3>
-            <CheckBoxDark />
+            <input
+              type="checkbox"
+              defaultChecked={dark}
+              onChange={handleChecked}
+            />
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
