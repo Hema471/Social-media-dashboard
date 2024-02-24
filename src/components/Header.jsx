@@ -5,7 +5,7 @@ import youtubeIcon from "../assets/icon-youtube.svg";
 import upIcon from "../assets/icon-up.svg";
 import downIcon from "../assets/icon-down.svg";
 import SocialCardBox from "./SocialCardBox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [cardData, setCardData] = useState([
@@ -47,14 +47,24 @@ const Header = () => {
       borderTop: "#C4032A",
     },
   ]);
-
   let [dark, setDark] = useState(false);
+  useEffect(() => {
+    return () => {
+      setDark(localStorage.getItem("darkMode") ? true : false);
+    };
+  }, []);
+
   function handleChecked(event) {
-    setDark(event.target.checked);
+    setDark(!dark);
+    localStorage.setItem("darkMode", dark);
   }
   console.log(dark);
+  if (dark) {
+    document.body.classList.add("dark");
+  } else {
+    document.body.classList.remove("dark");
+  }
 
-  // export  dark;
   return (
     <div className="flex justify-center bg-bg dark:bg-darkbg h-[250px] relative">
       <section className="container p-10 absolute z-50 top-0">
@@ -67,7 +77,7 @@ const Header = () => {
             <h3 className="md:px-5">Dark Mode</h3>
             <input
               type="checkbox"
-              defaultChecked={dark}
+              defaultChecked={!dark}
               onChange={handleChecked}
             />
           </div>
