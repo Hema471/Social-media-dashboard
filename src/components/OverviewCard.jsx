@@ -82,7 +82,7 @@ const OverviewCard = () => {
     },
   ]);
   return (
-    <section className="container  mt-[1100px] md:mt-[200px]">
+    <section className="container mt-[1100px] md:mt-[200px]">
       <p className="text-2xl px-9 font-bold text-[#63687E] dark:text-bg">
         Overview - Today
       </p>

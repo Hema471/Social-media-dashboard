@@ -10,7 +10,7 @@
 }
 .card-hover {
   // dark:hover:bg-bg-card
-  @apply hover:bg-[#E1E3F0] transition-all duration-200 cursor-pointer;
+  @apply hover:bg-[#E1E3F0] dark:hover:bg-[#333A56] transition-all duration-200 cursor-pointer;
 }
 .top-before {
   @apply before:content-[''] before:w-full before:h-4 before:top-0 before:left-0 before:absolute;

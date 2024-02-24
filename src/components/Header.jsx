@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import facebookIcon from "../assets/icon-facebook.svg";
 import twitterIcon from "../assets/icon-twitter.svg";
 import instagramIcon from "../assets/icon-instagram.svg";
@@ -5,7 +6,6 @@ import youtubeIcon from "../assets/icon-youtube.svg";
 import upIcon from "../assets/icon-up.svg";
 import downIcon from "../assets/icon-down.svg";
 import SocialCardBox from "./SocialCardBox";
-import { useEffect, useState } from "react";
 
 const Header = () => {
   const [cardData, setCardData] = useState([
@@ -35,7 +35,6 @@ const Header = () => {
       state: upIcon,
       textColor: "text-[#1DB489]",
       borderTop: "#E6A47E",
-      // borderTop: "linear-gradient(to right, #FDC468, #DF4996)",
     },
     {
       icon: youtubeIcon,
@@ -47,22 +46,27 @@ const Header = () => {
       borderTop: "#C4032A",
     },
   ]);
-  let [dark, setDark] = useState(false);
-  useEffect(() => {
-    return () => {
-      setDark(localStorage.getItem("darkMode") ? true : false);
-    };
-  }, []);
 
-  function handleChecked(event) {
-    setDark(!dark);
+  const [dark, setDark] = useState(() => {
+    // Initialize state from local storage
+    return localStorage.getItem("darkMode") === "true";
+  });
+
+  useEffect(() => {
+    // Apply 'dark' class to the body when 'dark' state changes
+    if (dark) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+
+    // Save 'dark' state to local storage
     localStorage.setItem("darkMode", dark);
-  }
-  console.log(dark);
-  if (dark) {
-    document.body.classList.add("dark");
-  } else {
-    document.body.classList.remove("dark");
+  }, [dark]); // Run effect whenever 'dark' state changes
+
+  function handleChecked() {
+    // Toggle 'dark' state
+    setDark((prevDark) => !prevDark);
   }
 
   return (
@@ -75,11 +79,7 @@ const Header = () => {
           </div>
           <div className="1.2 flex justify-between md:items-center">
             <h3 className="md:px-5">Dark Mode</h3>
-            <input
-              type="checkbox"
-              defaultChecked={!dark}
-              onChange={handleChecked}
-            />
+            <input type="checkbox" checked={dark} onChange={handleChecked} />
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
