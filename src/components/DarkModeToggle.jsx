@@ -1,16 +1,22 @@
-import React, { useState } from "react";
-import Test from "./Test";
+import { useState } from "react";
 
-export const DarkModeToggle = () => {
-  const handleChange = (e) => {
-    // Pass the event object to the Test component
-    <Test event={e.target.checked} />;
-  };
+const DarkModeToggle = () => {
+  let [dark, setDark] = useState(false);
 
+  function handleChecked(event) {
+    setDark(event.target.checked);
+  }
+  console.log(dark);
+  // export  dark;
   return (
     <>
       <label htmlFor="ch1"></label>
-      <input type="checkbox" id="ch1" onChange={handleChange} />
+      <input
+        type="checkbox"
+        id="ch1"
+        defaultChecked={dark}
+        onClick={handleChecked}
+      />
     </>
   );
 };
