@@ -1,3 +1,5 @@
+This is social media dashboard with theme switcher 
+
 Front end mentor challenge
 
 # Demo Link: https://social-media-dash.surge.sh/
