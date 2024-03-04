@@ -70,7 +70,7 @@ const Header = () => {
   }
 
   return (
-    <div className="flex justify-center bg-bg dark:bg-darkbg h-[250px] relative">
+    <div className="flex justify-center h-[250px] relative">
       <section className="container p-10 absolute z-50 top-0">
         <div className="1 dark:text-bg flex flex-col md:flex-row md:justify-between md:items-center font-bold ">
           <div className="1.1 flex  flex-col  md:flex-col">

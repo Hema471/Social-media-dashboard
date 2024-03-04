@@ -10,10 +10,10 @@ const SocialCardBox = ({
 }) => {
   return (
     <div
-      className={`container card-hover dark:text-white max-w-full max-h-full w-[320px] h-[265px] rounded-md border-t-4 bg-[#F8F9FE]`}
+      className={`container  bg-bg  dark:text-white max-w-full max-h-full w-[320px] h-[265px] rounded-md border-t-4 `}
       style={{ borderTopColor: borderTop }}
     >
-      <div className="flex-col element-center dark:bg-darkbg-card gap-5 p-10">
+      <div className="flex-col element-center dark:bg-darkbg-card card-hover gap-5 p-10">
         <div className="flex gap-3">
           <img src={icon} alt="img" className="object-contain w-6 h-6" />
           <div>{name}</div>
