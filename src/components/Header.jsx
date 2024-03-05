@@ -78,6 +78,9 @@ const Header = () => {
             <h1 className=" text-2xl">Social Media Dashboard</h1>
             <h3>Total Followers: 23.004</h3>
           </div>
+
+          <hr className="border-gray-500 my-5" />
+
           <div className="1.2 flex justify-between md:items-center">
             <h3 className="md:px-5">Dark Mode</h3>
             <input type="checkbox" checked={dark} onChange={handleChecked} />
