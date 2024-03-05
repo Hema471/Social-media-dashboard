@@ -54,6 +54,11 @@ const Header = () => {
 
   useEffect(() => {
     // Apply 'dark' class to the body when 'dark' state changes
+    if (dark) {
+      document.body.classList.remove("dark");
+    } else {
+      document.body.classList.add("dark");
+    }
     document.body.classList.toggle("dark");
 
     // Save 'dark' state to local storage
