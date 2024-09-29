@@ -83,7 +83,18 @@ const Header = () => {
 
           <div className="1.2 flex justify-between md:items-center">
             <h3 className="md:px-5">Dark Mode</h3>
-            <input type="checkbox" checked={dark} onChange={handleChecked} />
+            <div className="flex items-center space-x-2">
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={dark}
+                  onChange={handleChecked}
+                  className="sr-only peer"
+                />
+                <div className="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:bg-blue-600 peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 transition-all duration-300"></div>
+                <span className="absolute left-1 top-1 w-4 h-4 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-5 dark:border-gray-600"></span>
+              </label>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mt-5">
