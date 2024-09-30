@@ -69,7 +69,6 @@ const Header = () => {
     // Toggle 'dark' state
     setDark((prevDark) => !prevDark);
   }
-
   return (
     <div className="flex justify-center h-[250px] relative">
       <section className="container p-10 absolute z-50 top-0">
